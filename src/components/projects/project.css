@@ -1,0 +1,17 @@
+.carousel-container{
+    width: 800px; 
+    height: 600px; 
+    margin-top: 40px;
+    margin-left: 27%;
+}
+
+.carousel-container h1{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-container h3{
+    color: #7a7a7a;
+    display: flex;
+    justify-content: center;
+}

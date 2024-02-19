@@ -1,0 +1,13 @@
+.carousel-container h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+
+}
+
+.carousel-container h3{
+    color: #7a7a7a;
+    display: flex;
+    justify-content: center;
+}
+

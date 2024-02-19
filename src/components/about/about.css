@@ -1,0 +1,85 @@
+.about__Container{
+display:grid;
+grid-template-columns: 35% 50%;
+gap:10%;
+}
+
+#about h1{
+    color: rgb(0, 0, 0);
+    display: flex;
+    margin-left: 50%;
+    /* justify-content: center; */
+}
+
+.about__me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg,transparent,var(--color-primary)),transparent;
+    display: grid;
+    place-items: center;
+
+}
+
+.about__me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(0deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover{
+    transform: rotate(10deg);
+}
+
+.about__cards{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+}
+
+.about__card{
+    background-color: var(--color-bg-variant);
+    padding:2rem;
+    border-radius: 1rem;
+    text-align:center;
+    transition:var(--transition);
+    border:1px solid transparent;
+}
+
+.about__card:hover{
+    background-color: black;
+    border-color:black;
+}
+
+
+.about__card h5{
+    font-size: 130%;
+}
+
+.about__card h5{
+    font-size: 100%;
+    color:rgb(255, 255, 255);
+}
+
+.about__card small{
+    font-size: 100%;
+    color:rgb(150, 150, 150);
+}
+.about__content p{
+    margin-top: 10%;
+    text-align: justify;
+    font-weight: 100%;
+}
+
+.about__content a{
+    margin-top: 10%;
+}
+
+.about__content {
+    margin-top: 5%;
+}
+
+.btn{
+    padding:10px;
+}
