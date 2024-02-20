@@ -20,7 +20,7 @@ function BasicExample() {
   <br></br>
   <h3>More about the positions I have worked in!</h3>
   <br></br>
-    <Accordion defaultActiveKey="0">
+    <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header style={{backgroundColor:"#ccffe6"}}>
           <img src={open} alt=""

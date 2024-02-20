@@ -2,7 +2,7 @@ import React from 'react'
 import './about.css'
 import me from "../../assets/agrima.jpg"
 
-import {FaGithubSquare} from "react-icons/fa"
+
 
 const About = () => {
   return (
