@@ -31,7 +31,7 @@ const About = () => {
           </div>
           <p>My career objective is to embrace a growth mindset, constantly seeking opportunities to learn from others and to tackle every task with utmost dedication. I am determined to enhance my technical knowledge and skills, propelling myself forward in the field. With a blend of strong leadership, and effective communication, I aspire to take on new challenges, leading the way towards success while making a meaningful contribution to the organization's growth. </p>
 
-          <a href="#contact" className='btn'>Let's Connect </a>
+          <a href="https://www.linkedin.com/in/agrima-jain-/" className='btn'>Let's Connect </a>
         </div>    
       </div>
     </section>
