@@ -87,6 +87,7 @@ const Portfolio = () => {
           <Button variant="danger">Python</Button>{' '}
           <Button variant="success">OpenCV</Button>{' '}
           <Button variant="success">Tesseract</Button>{' '}
+          <Button variant="secondary" href="/identity-guard">Know More</Button>{' '}
         </article>  
 
         <article className="portfolio__item">
