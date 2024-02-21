@@ -39,6 +39,7 @@ function App() {
           <p>I had the opportunity to take the github workshop which had over 130+ participants.The workshop was all about version control and collaborative development, covering topics like user repository, forking, cloning, pull requests, and getting hands-on experience with Git bash.</p>
         </Carousel.Caption>
       </Carousel.Item>
+      
       <Carousel.Item>
       <img
           className="d-block w-100"
