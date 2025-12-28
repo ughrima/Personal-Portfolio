@@ -1,37 +1,211 @@
 header{
-    height: 85vh;
-    padding-top:17rem;
+    min-height: 100vh;
+    padding: 2rem 0;
     overflow: hidden;
-    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
 }
 
 .header_container{
     text-align: center;
     height: 100%;
-    position:relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header_container h5 {
+    font-size: 1.3rem;
+    color: #858585;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    animation: fadeIn 1.2s ease;
 }
 
 .header_container h1{
-    font-size: 70px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #569cd6;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    animation: fadeIn 1.4s ease;
+}
+
+.header_container p {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+    min-height: 3rem;
+    color: #4ec9b0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    animation: fadeIn 1.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===cta=== */
 .cta{
-    margin-top:5%;
+    margin-top: 2.5rem;
     display: flex;
-    gap:1.2rem;
+    gap: 1.2rem;
     justify-content: center;
-    font-size: 20px;
+    flex-wrap: wrap;
 }
 
 .Header__Socials {
     display: flex;
-    gap:0.8rem;
+    gap: 1.5rem;
     justify-content: center;
-    margin-top: 2%;
-    font-size: 200%;
+    margin-top: 3rem;
+    font-size: 2rem;
 }
 
 .Header__Socials a{
-    color: rgb(74, 74, 74);
+    color: #d4d4d4;
+    transition: var(--transition);
+    display: flex;
+    padding: 1rem;
+    border-radius: 50%;
+    background: #2d2d30;
+    border: 1px solid #3e3e42;
+    animation: float 3s ease-in-out infinite;
+}
+
+.Header__Socials a:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.Header__Socials a:hover {
+    background: #007acc;
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 122, 204, 0.5);
+    border-color: #0098ff;
+}
+
+/* Scroll Down Animation */
+.scroll-down {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-down a {
+    position: relative;
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    display: block;
+}
+
+.scroll-down a span {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    animation: scroll-down 2s infinite;
+}
+
+.scroll-down a span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.scroll-down a span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header_container h1 {
+        font-size: 3rem;
+    }
+    
+    .header_container p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding-top: 6rem;
+        height: 90vh;
+    }
+    
+    .header_container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header_container p {
+        font-size: 1.2rem;
+    }
+    
+    .cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Header__Socials {
+        font-size: 1.5rem;
+        gap: 1rem;
+    }
 }

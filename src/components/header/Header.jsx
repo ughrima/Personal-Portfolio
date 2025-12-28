@@ -8,26 +8,29 @@ const Header = () => {
   const typedTextRef = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(typedTextRef.current, {
-      strings: ["Frontend Devloper","Coder","ML Enthusiast"],
-      typeSpeed: 100,
-      backSpeed: 40,
-      loop: true,
-      showCursor: false, 
-      smartBackspace: true,
-    });
+    if (typedTextRef.current) {
+      const typed = new Typed(typedTextRef.current, {
+        strings: ["AI & Tech Developer", "Software Engineer", "ML Researcher", "Full Stack Developer"],
+        typeSpeed: 80,
+        backSpeed: 50,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|',
+        smartBackspace: true,
+      });
 
-    return () => {
-      typed.destroy();
-    };
+      return () => {
+        typed.destroy();
+      };
+    }
   }, []);
 
   return (
-    <header>
+    <header id="home">
       <div className="container header_container">
-        <h2>Hello I'm</h2>
+        <h5 className="text-light">Hello, I'm</h5>
         <h1>Agrima Jain</h1>
-        <p ref={typedTextRef} style={{fontSize:"30px"}}></p>
+        <p className="text-light" ref={typedTextRef}></p>
         <CTA />
         <HeaderSocials />
       </div>

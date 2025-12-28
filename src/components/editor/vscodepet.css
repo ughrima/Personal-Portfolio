@@ -1,0 +1,161 @@
+.vscode-pet {
+  position: fixed;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  pointer-events: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.vscode-pet.flipped {
+  transform: scaleX(-1);
+}
+
+.pet-sprite {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 70px;
+}
+
+.pixel-row {
+  display: flex;
+  height: 8px;
+}
+
+.pixel {
+  width: 7px;
+  height: 7px;
+  margin: 0.5px;
+  border-radius: 0;
+}
+
+.dog .head {
+  background-color: #d4a574;
+}
+
+.dog .ear-left,
+.dog .ear-right {
+  background-color: #8b6914;
+  border-radius: 50% 50% 0 0;
+}
+
+.dog .eye-left,
+.dog .eye-right {
+  background-color: #000000;
+  border-radius: 50%;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+.dog .nose {
+  background-color: #000000;
+  border-radius: 50% 50% 50% 0;
+}
+
+.dog .tongue {
+  background-color: #ff69b4;
+  border-radius: 0 0 50% 50%;
+  animation: tongueWag 0.5s ease-in-out infinite;
+}
+
+@keyframes tongueWag {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+}
+
+.dog .body {
+  background-color: #d4a574;
+}
+
+.dog .leg-front-left,
+.dog .leg-front-right,
+.dog .leg-back-left,
+.dog .leg-back-right {
+  background-color: #8b6914;
+  border-radius: 0 0 2px 2px;
+}
+
+.dog .tail-1,
+.dog .tail-2,
+.dog .tail-3 {
+  background-color: #8b6914;
+  border-radius: 2px;
+}
+
+.tail-row {
+  animation: tailWag 0.3s ease-in-out infinite;
+}
+
+@keyframes tailWag {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.vscode-pet.walking .pet-sprite {
+  animation: walk 0.4s infinite;
+}
+
+@keyframes walk {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.vscode-pet.walking .leg-front-left,
+.vscode-pet.walking .leg-back-right {
+  animation: legMove 0.4s infinite;
+}
+
+.vscode-pet.walking .leg-front-right,
+.vscode-pet.walking .leg-back-left {
+  animation: legMove 0.4s infinite 0.2s;
+}
+
+@keyframes legMove {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.vscode-pet:hover {
+  transform: scale(1.2);
+}
+
+.vscode-pet.flipped:hover {
+  transform: scaleX(-1) scale(1.2);
+}
+
+.vscode-pet.paused .pet-sprite {
+  animation: none;
+}
+
+.vscode-pet.paused .tail-row {
+  animation: none;
+}

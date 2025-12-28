@@ -2,37 +2,54 @@ import React from 'react'
 import './about.css'
 import me from "../../assets/agrima.jpg"
 
-
-
 const About = () => {
   return (
     <section id="about">
-
-      <h1>Get to Know Me</h1>
-      {/* <h2>About Me</h2> */}
-
-      <div className="container about__Container">
-        <div className='about__me'>
-          <div className='about__me-image'>
-          <img src={me} alt="" />
+      <div className="code-section">
+        <span className="code-keyword">const</span> <span className="code-variable">about</span> = <span className="code-bracket">{'{'}</span>
+      </div>
+      
+      <div className="code-block">
+        <div className="code-line">
+          <span className="code-property">name</span>: <span className="code-string">"Agrima Jain"</span>,
+        </div>
+        <div className="code-line">
+          <span className="code-property">role</span>: <span className="code-string">"AI & Tech Developer"</span>,
+        </div>
+        <div className="code-line">
+          <span className="code-property">education</span>: <span className="code-bracket">{'{'}</span>
+        </div>
+        <div className="code-indent">
+          <div className="code-line">
+            <span className="code-property">degree</span>: <span className="code-string">"B.Tech Computer Science and Engineering"</span>,
+          </div>
+          <div className="code-line">
+            <span className="code-property">university</span>: <span className="code-string">"UPES, Dehradun"</span>,
+          </div>
+          <div className="code-line">
+            <span className="code-property">cgpa</span>: <span className="code-number">8.66</span>
           </div>
         </div>
-        <div className='about__content'>
-          <div className='about__cards'>
-            <arcticle className='about__card'>
-              <h5>School</h5>
-              <small>DPS RKP, Delhi</small>
-            </arcticle>
-            <arcticle className='about__card'>
-              {/* <BiSolidSchool className="about__icon"/> */}
-              <h5>College</h5>
-              <small>UPES, Uttarakhand</small>
-            </arcticle>
-          </div>
-          <p>My career objective is to embrace a growth mindset, constantly seeking opportunities to learn from others and to tackle every task with utmost dedication. I am determined to enhance my technical knowledge and skills, propelling myself forward in the field. With a blend of strong leadership, and effective communication, I aspire to take on new challenges, leading the way towards success while making a meaningful contribution to the organization's growth. </p>
+        <div className="code-line">
+          <span className="code-bracket">{'}'}</span>,
+        </div>
+        <div className="code-line">
+          <span className="code-property">bio</span>: <span className="code-string">`I'm a passionate AI & Tech Developer with a strong foundation in software engineering and machine learning. Currently pursuing my B.Tech in Computer Science and Engineering at UPES, I've gained valuable experience working with cutting-edge technologies including LLMs, RAG pipelines, and enterprise automation systems. My journey includes internships at DESRI and Dell Technologies, where I've contributed to real-world projects involving AI-driven solutions and backend modernization. I'm also actively involved in research on SLAM (Simultaneous Localization and Mapping) for drone navigation. With a growth mindset and dedication to continuous learning, I'm always excited to take on new challenges and contribute to innovative solutions.`</span>
+        </div>
+      </div>
+      
+      <div className="code-section">
+        <span className="code-bracket">{'}'}</span>;
+      </div>
 
-          <a href="https://www.linkedin.com/in/agrima-jain-/" className='btn'>Let's Connect </a>
-        </div>    
+      <div className="about-image-container">
+        <div className="about-image-wrapper">
+          <img src={me} alt="Agrima Jain" className="about-image" />
+        </div>
+      </div>
+
+      <div className="code-section">
+        <span className="code-keyword">export default</span> <span className="code-variable">about</span>;
       </div>
     </section>
   )

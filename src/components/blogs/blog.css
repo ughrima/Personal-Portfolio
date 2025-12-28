@@ -1,12 +1,75 @@
-.carousel-container h1{
-    display: flex;
-    justify-content: center;
+#blogs {
+  margin-top: 2rem;
+  padding: 2rem 0;
 }
 
-.carousel-container h3{
-    color: #7a7a7a;
-    display: flex;
-    justify-content: center;
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
+.carousel-container h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #58a6ff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
 
+.carousel-container h3 {
+  color: #79c0ff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.carousel-container .card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  color: #e6edf3;
+}
+
+.carousel-container .card-header {
+  background: #1c2128;
+  border-bottom: 1px solid #21262d;
+  color: #58a6ff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-weight: 600;
+}
+
+.carousel-container .card-body {
+  color: #e6edf3;
+}
+
+.carousel-container .card-text {
+  color: #e6edf3 !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  line-height: 1.8;
+}
+
+.carousel-container .btn {
+  background: #1f6feb;
+  border-color: #1f6feb;
+  color: #ffffff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.carousel-container .btn:hover {
+  background: #388bfd;
+  border-color: #388bfd;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #blogs {
+    margin-top: 4rem;
+  }
+}

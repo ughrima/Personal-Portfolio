@@ -1,0 +1,118 @@
+#skills {
+  margin-top: 8rem;
+}
+
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skills__category {
+  background: #161b22;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #21262d;
+  transition: var(--transition);
+  animation: bounceIn 0.8s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.skills__category:hover {
+  background: #1c2128;
+  border-color: #1f6feb;
+  transform: translateY(-8px) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(31, 111, 235, 0.4);
+}
+
+.skills__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills__icon {
+  background: #1f6feb;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.skills__header h3 {
+  color: #79c0ff;
+  font-size: 1.5rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.skill__item {
+  background: #1f6feb;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  border: 1px solid #1f6feb;
+  animation: pulse 2s ease-in-out infinite;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  white-space: nowrap;
+  word-break: keep-all;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.skill__item:hover {
+  background: #388bfd;
+  border-color: #388bfd;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(31, 111, 235, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
+
+  #skills {
+    margin-top: 4rem;
+  }
+}
+
